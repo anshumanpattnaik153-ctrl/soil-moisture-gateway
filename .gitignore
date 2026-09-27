@@ -23,3 +23,24 @@ cpp/sensor_output.txt
 .idea/
 *.swp
 .DS_Store
+
+
+# Backup files
+*.backup
+*.before_database
+*.backup.cpp
+
+# Gateway generated binaries
+daemon/soil_gateway_daemon
+daemon/soil_gateway_debug
+
+# Linux kernel driver build files
+driver/*.o
+driver/*.ko
+driver/*.cmd
+driver/*.mod
+driver/*.mod.c
+driver/Module.symvers
+driver/modules.order
+driver/.module-*
+hal/test_hal
