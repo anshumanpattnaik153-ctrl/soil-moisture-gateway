@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# C++ build files
+cpp/sensor_processor
+cpp/*.o
+
+# Generated output
+cpp/sensor_output.txt
+
+# Editor / OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
