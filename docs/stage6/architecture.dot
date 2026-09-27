@@ -1,5 +1,5 @@
 digraph Architecture {
-    rankdir=LR;
+    rankdir=TB;
     node [shape=box, style="rounded"];
 
     Sensors [label="Simulated Sensor Nodes\n8 Nodes"];
