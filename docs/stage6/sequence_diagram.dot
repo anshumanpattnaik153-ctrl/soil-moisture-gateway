@@ -1,0 +1,22 @@
+digraph SequenceDiagram {
+    rankdir=LR;
+    node [shape=box];
+
+    Sensor [label="Sensor Node"];
+    HAL [label="HAL"];
+    Driver [label="Linux Driver"];
+    Gateway [label="Gateway Daemon"];
+    Processor [label="C++ Processor"];
+    Backend [label="Flask Backend"];
+    DB [label="SQLite"];
+    Dashboard [label="Dashboard"];
+
+    Sensor -> HAL [label="1. Send sensor readings"];
+    HAL -> Driver [label="2. Device access"];
+    Driver -> Gateway [label="3. Provide node data"];
+    Gateway -> Processor [label="4. Process readings"];
+    Processor -> Backend [label="5. Send processed data"];
+    Backend -> DB [label="6. Store sensor record"];
+    Backend -> Dashboard [label="7. Provide API data"];
+    Dashboard -> Backend [label="8. Request latest data"];
+} 

@@ -1,0 +1,23 @@
+digraph StateDiagram {
+    rankdir=LR;
+    node [shape=circle];
+
+    Start [shape=point];
+    Normal [label="NORMAL"];
+    Dry [label="DRY"];
+    Wet [label="WET"];
+    Alert [shape=doublecircle, label="IRRIGATION\nRECOMMENDED"];
+
+    Start -> Normal;
+
+    Normal -> Dry [label="Moisture < 40%"];
+    Normal -> Wet [label="Moisture > 60%"];
+
+    Dry -> Alert [label="Dry condition"];
+    Dry -> Normal [label="Moisture 40-60%"];
+
+    Wet -> Normal [label="Moisture 40-60%"];
+    Wet -> Dry [label="Moisture < 40%"];
+
+    Alert -> Normal [label="Moisture restored"];
+}

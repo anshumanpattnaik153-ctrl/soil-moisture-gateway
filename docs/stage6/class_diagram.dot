@@ -1,0 +1,53 @@
+digraph ClassDiagram {
+    rankdir=TB;
+    node [shape=record];
+
+    SensorNode [
+        label="{SensorNode|
+        nodeId : int\l
+        moisture : int\l
+        temperature : int\l
+        battery : int\l|
+        getStatus()\l
+        getRecommendation()\l}"
+    ];
+
+    HAL [
+        label="{SoilGatewayHAL|
+        devicePath : string\l|
+        openDevice()\l
+        readNodes()\l
+        closeDevice()\l}"
+    ];
+
+    Gateway [
+        label="{Gateway|
+        running : bool\l|
+        start()\l
+        processNodes()\l
+        stop()\l}"
+    ];
+
+    Backend [
+        label="{Flask Backend|
+        API routes\l
+        logging service\l|
+        getNodes()\l
+        getHistory()\l
+        getAnalytics()\l}"
+    ];
+
+    Database [
+        label="{Database|
+        sensor_logs\l|
+        insertLog()\l
+        getHistory()\l
+        getAnalytics()\l}"
+    ];
+
+    SensorNode -> Gateway [label="processed by"];
+    HAL -> Gateway [label="provides sensor data"];
+    Gateway -> SensorNode [label="handles"];
+    Gateway -> Backend [label="sends processed data"];
+    Backend -> Database [label="stores/queries"];
+}

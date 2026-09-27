@@ -1,0 +1,23 @@
+digraph Architecture {
+    rankdir=LR;
+    node [shape=box, style="rounded"];
+
+    Sensors [label="Simulated Sensor Nodes\n8 Nodes"];
+    HAL [label="Hardware Abstraction Layer\nHAL"];
+    Driver [label="Linux Device Driver\nsoil_gateway"];
+    Device [label="/dev/soil_gateway"];
+    Gateway [label="Gateway Daemon\nC++"];
+    Processor [label="C++ Sensor Processor"];
+    Backend [label="Flask Backend\nREST APIs"];
+    DB [label="SQLite Database"];
+    Dashboard [label="Web Monitoring Dashboard"];
+
+    Sensors -> HAL [label="sensor data"];
+    HAL -> Driver [label="device access"];
+    Driver -> Device [label="character device"];
+    Device -> Gateway [label="read data"];
+    Gateway -> Processor [label="sensor readings"];
+    Processor -> Backend [label="processed data"];
+    Backend -> DB [label="store/query"];
+    Backend -> Dashboard [label="JSON/API data"];
+}
