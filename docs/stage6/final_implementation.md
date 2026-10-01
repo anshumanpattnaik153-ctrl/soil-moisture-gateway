@@ -30,7 +30,7 @@ Gateway Daemon
 C++ Sensor Processing
         |
         v
-Flask Backend
+C++ Backend
         |
         v
 SQLite Database

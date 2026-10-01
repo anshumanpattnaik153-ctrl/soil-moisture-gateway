@@ -29,7 +29,7 @@ digraph ClassDiagram {
     ];
 
     Backend [
-        label="{Flask Backend|
+        label="{C++ Backend|
         API routes\l
         logging service\l|
         getNodes()\l

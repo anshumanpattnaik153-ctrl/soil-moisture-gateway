@@ -7,7 +7,7 @@ digraph SequenceDiagram {
     Driver [label="Linux Driver"];
     Gateway [label="Gateway Daemon"];
     Processor [label="C++ Processor"];
-    Backend [label="Flask Backend"];
+    Backend [label="C++ Backend"];
     DB [label="SQLite"];
     Dashboard [label="Dashboard"];
 
