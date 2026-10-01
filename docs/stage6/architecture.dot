@@ -8,7 +8,7 @@ digraph Architecture {
     Device [label="/dev/soil_gateway"];
     Gateway [label="Gateway Daemon\nC++"];
     Processor [label="C++ Sensor Processor"];
-    Backend [label="Flask Backend\nREST APIs"];
+    Backend [label="C++ HTTP Backend\nREST APIs"];
     DB [label="SQLite Database"];
     Dashboard [label="Web Monitoring Dashboard"];
 

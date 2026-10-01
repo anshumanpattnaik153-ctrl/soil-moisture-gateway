@@ -19,7 +19,7 @@ Gateway Daemon
         ↓
 C++ Sensor Processing
         ↓
-Flask Backend
+C++ HTTP Backend
         ↓
 SQLite Database
         ↓
