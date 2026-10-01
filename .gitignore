@@ -44,3 +44,4 @@ driver/Module.symvers
 driver/modules.order
 driver/.module-*
 hal/test_hal
+backend_cpp/soil_backend
