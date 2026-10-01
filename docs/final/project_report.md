@@ -48,7 +48,7 @@ The project includes:
 - Linux device-driver interface.
 - Hardware Abstraction Layer.
 - C++ gateway and sensor processing.
-- Python Flask backend.
+- C++ HTTP backend backend.
 - SQLite database.
 - REST API endpoints.
 - Monitoring dashboard.
@@ -98,9 +98,9 @@ The classification rules are:
 
 For a DRY condition, the system generates an irrigation recommendation.
 
-### 4.6 Flask Backend
+### 4.6 C++ HTTP Backend
 
-The backend is implemented using Python Flask. It provides REST API endpoints for sensor information, historical data and analytics.
+The backend is implemented using C++ HTTP backend. It provides REST API endpoints for sensor information, historical data and analytics.
 
 The main endpoints are:
 
@@ -127,7 +127,7 @@ The system shall:
 5. Classify soil moisture conditions.
 6. Generate irrigation recommendations for dry conditions.
 7. Store sensor readings in SQLite.
-8. Provide REST APIs through Flask.
+8. Provide REST APIs through the C++ HTTP backend.
 9. Display monitoring information through a web dashboard.
 10. Provide basic sensor analytics.
 
@@ -138,7 +138,7 @@ The system should provide:
 - Modular software architecture.
 - Reliable communication between software components.
 - Clear separation between hardware access and application logic.
-- Maintainable C++ and Python code.
+- Maintainable C++ code.
 - Local data persistence.
 - Version control using Git.
 - A structure that can later support real sensor hardware.
@@ -150,8 +150,8 @@ The system should provide:
 | Linux | Operating system and driver environment |
 | C | Linux device driver |
 | C++ | HAL, gateway and sensor processing |
-| Python | Backend development |
-| Flask | REST API and web backend |
+| C++ | Backend development |
+| C++ HTTP Server | REST API and web backend |
 | SQLite | Sensor data storage |
 | HTML/CSS/JavaScript | Monitoring dashboard |
 | Git | Version control |
