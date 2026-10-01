@@ -256,7 +256,7 @@ void loggingLoop() {
 // Read dashboard HTML
 // ------------------------------------------------------------
 string readDashboard() {
-    ifstream file("backend/templates/index.html");
+    ifstream file("backend_cpp/index.html");
 
     if (!file.is_open())
         return "<h1>Dashboard file not found</h1>";
