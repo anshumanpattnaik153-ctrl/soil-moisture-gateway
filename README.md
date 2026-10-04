@@ -56,6 +56,7 @@ SQLite Database
           |
           v
 Monitoring Dashboard
+```
 
 ## Technologies Used
 
@@ -104,6 +105,7 @@ The device is exposed through:
 ```text
 /dev/soil_gateway
 
+```
 
 ## C++ HTTP Backend
 
@@ -278,6 +280,7 @@ The project was tested at component and integration levels.
 | `/api/analytics` API | PASS |
 | Dashboard operation | PASS |
 | End-to-end integration | PASS |
+```
 
 ## Project Structure
 
@@ -313,6 +316,7 @@ soil-moisture-gateway/
 │
 ├── .gitignore
 └── README.md
+```
 
 
 ## Documentation
@@ -422,6 +426,7 @@ C++ Sensor Processing
 C++ HTTP Backend
      ↓
 SQLite Database
+```
      ↓
 Monitoring Dashboard
 
